@@ -50,6 +50,7 @@ Available options:
     :ssl => true             # default false
     :docroot => 'public'     # default current working directory
     :launchy => false        # default true
+    :quiet => true           # default false
 
 ## Development
 

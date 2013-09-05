@@ -37,7 +37,8 @@ module Guard
           @options[:host],
           @options[:port].to_s,
           @options[:ssl].to_s,
-          @options[:docroot]
+          @options[:docroot],
+          @options[:quiet].to_s
         )
         wait_for_port
         if @options[:launchy]
