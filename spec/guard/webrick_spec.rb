@@ -87,12 +87,13 @@ describe Guard::WEBrick do
         :host => '127.0.2.5',
         :port => 8080,
         :ssl => true,
-        :docroot => '/tmp' })
+        :docroot => '/tmp',
+        :quiet => false })
       subject.stub(:wait_for_port)
       Spoon.should_receive(:spawnp).with( 'ruby',
         File.expand_path(File.join(File.dirname(__FILE__),
           %w{.. .. lib guard webrick server.rb})),
-        '127.0.2.5', '8080', 'true', '/tmp'
+        '127.0.2.5', '8080', 'true', '/tmp', 'false'
       )
       subject.start
     end
@@ -101,7 +102,7 @@ describe Guard::WEBrick do
       Spoon.should_receive(:spawnp).with( 'ruby',
         File.expand_path(File.join(File.dirname(__FILE__),
           %w{.. .. lib guard webrick server.rb})),
-        '0.0.0.0', '3000', 'false', Dir::pwd
+        '0.0.0.0', '3000', 'false', Dir::pwd, ""
       )
       subject.start
     end
