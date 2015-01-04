@@ -10,7 +10,7 @@ group :development do
 end
 
 group :test do
-  gem 'rake', '~> 0.9'
+  gem 'rake', '~> 10.4'
 end
 
 platforms :jruby do
