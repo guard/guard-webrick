@@ -1,5 +1,4 @@
 require 'guard'
-require 'guard/compat/plugin'
 require 'spoon'
 require 'launchy'
 require 'socket'

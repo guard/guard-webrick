@@ -1,5 +1,6 @@
 require 'rspec'
 require 'guard/webrick'
+require 'guard/compat/plugin'
 require 'guard/compat/test/helper'
 
 ENV["GUARD_ENV"] = 'test'
