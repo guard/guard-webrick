@@ -1,16 +1,16 @@
 require 'guard'
-require 'guard/guard'
+require 'guard/compat/plugin'
 require 'spoon'
 require 'launchy'
 require 'socket'
 require 'timeout'
 
 module Guard
-  class WEBrick < Guard
+  class WEBrick < Plugin
 
     attr_accessor :pid
 
-    def initialize(watchers=[], options={})
+    def initialize(options={})
       super
       @options = {
         :host       => '0.0.0.0',
